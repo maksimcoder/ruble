@@ -1,13 +1,16 @@
 import { ReactElement } from 'react';
 
-import { Home } from 'pages/Home';
+import { App } from 'app/App';
+import { Main } from 'pages/Main';
 
 enum ERoutes {
-	Home = '/',
+	App = '/',
+	Main = '/main',
 }
 
 const RoutesComponents: Record<ERoutes, ReactElement> = {
-	[ERoutes.Home]: <Home />,
+	[ERoutes.App]: <App />,
+	[ERoutes.Main]: <Main />,
 };
 
 export { ERoutes, RoutesComponents };
