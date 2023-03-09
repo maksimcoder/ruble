@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { Home } from 'pages/Home/Home';
+import { Home } from 'pages/Home';
 
 enum ERoutes {
 	Home = '/',
