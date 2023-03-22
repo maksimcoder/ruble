@@ -1,15 +1,18 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
+import { Paper } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 
+import './styles/reset.scss';
 import './styles/variables/global.scss';
-import './styles/themes/light.scss';
+import { ThemeContext } from './providers/theme';
 
 const App: FC = () => {
+	const { changeTheme } = useContext(ThemeContext);
 	return (
-		<div className='app'>
-			<h1>this is app</h1>
+		<Paper elevation={0} className='app'>
+			<button onClick={changeTheme}>click</button>
 			<Outlet />
-		</div>
+		</Paper>
 	);
 };
 
